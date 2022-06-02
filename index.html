@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculate the percentage</title>
+  </head>
+  <body>
+    <div class="column">
+      <label for="price">Price:</label>
+      <input type="text" id="price" name="price" required
+      minlength="4" maxlength="8" size="10">
+      <label for="discount">Discount (%):</label>
+      <input type="text" id="discount" name="discount" required
+        minlength="4" maxlength="8" size="10">
+      <br>
+      <button id ="btn-calculate">Calculate</button>
+    </div>
+    <div class="column">
+       <label for="result">New Price:</label>
+       <h3 class="result" id="result">xx</h2>
+       <label for="disc">Money reduced:</label>
+       <h3 class="disc" id="disc">xx</h2>
+      </div>
+    <script src="script.js"></script>
+  </body>
+</html>
