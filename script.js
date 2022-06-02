@@ -14,8 +14,8 @@ btnCalculate.addEventListener('click', calculate);
 }
 
 const calculate = function () {
-    const priceInt = Number(price.value.replace(',','.').trim());
-    const discountInt = Number(discount.value.replace(',','.').trim());
+    const priceInt = Number(price.value.replace(',','.').replace(/\s/g, ''));
+    const discountInt = Number(discount.value.replace(',','.').replace(/\s/g, ''));
     const discountReduced = priceInt * (discountInt * 0.01);
     console.log(discountReduced);
     const resultNumber = (priceInt - discountReduced);  
