@@ -52,16 +52,23 @@
                         let li = document.createElement("li");
                         li.innerHTML = `<span class="titulo">${title}</span>`;
                         
-                        let commentsArray = comment.split("&"); // Dividimos por '&'
-                        commentsArray.forEach(text => {
-                            let p = document.createElement("p");
-                            p.textContent = text;
-                            li.appendChild(p);
-
-                            let checkbox = document.createElement("input");
-                            checkbox.type = "checkbox";
-                            li.appendChild(checkbox);
-                        });
+                let commentsArray = comment.split("&"); // Dividimos por '&'
+                commentsArray.forEach(text => {
+                    let container = document.createElement("span"); // Usamos un contenedor inline
+                    container.style.display = "inline-flex"; // Asegura que los elementos estén en línea y alineados
+                
+                    let p = document.createElement("p");
+                    p.textContent = text;
+                    p.style.display = "inline"; // Para mantenerlo en la misma línea
+                
+                    let checkbox = document.createElement("input");
+                    checkbox.type = "checkbox";
+                    checkbox.style.marginLeft = "5px"; // Espacio entre el texto y el checkbox
+                
+                    container.appendChild(p);
+                    container.appendChild(checkbox);
+                    li.appendChild(container);
+                    });
                         
                         commentsList.appendChild(li);
                     }
