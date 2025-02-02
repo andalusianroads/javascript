@@ -49,28 +49,34 @@
                 lines.forEach(line => {
                     let [title, comment] = line.split(",");
                     if (title && comment) {
+                        let li = document.createElement("li");
+                        let titleSpan = document.createElement("span");
+                        titleSpan.className = "titulo";
+                        titleSpan.textContent = title;
+                        li.appendChild(titleSpan);
+
                         let commentsArray = comment.split("&");
                         commentsArray.forEach(text => {
-                            let li = document.createElement("li");
-                            li.innerHTML = `<span class="titulo">${title}</span>`;
-
-                            let container = document.createElement("span");
-                            container.style.display = "inline-flex";
+                            let container = document.createElement("div");
+                            container.style.display = "flex";
+                            container.style.alignItems = "center";
+                            container.style.marginTop = "5px";
                 
                             let p = document.createElement("p");
                             p.textContent = text;
-                            p.style.display = "inline";
+                            p.style.margin = "0";
+                            p.style.flex = "1";
                 
                             let checkbox = document.createElement("input");
                             checkbox.type = "checkbox";
-                            checkbox.style.marginLeft = "5px";
+                            checkbox.style.marginLeft = "10px";
                 
                             container.appendChild(p);
                             container.appendChild(checkbox);
                             li.appendChild(container);
-                            
-                            commentsList.appendChild(li);
                         });
+                        
+                        commentsList.appendChild(li);
                     }
                 });
             } catch (error) {
