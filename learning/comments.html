@@ -63,16 +63,16 @@
     <script>
         async function loadNotes() {
             try {
-                let response = await fetch('notes.csv');
+                let response = await fetch('comments.csv');
                 let data = await response.text();
-                let lines = data.split('\n').filter(line => line.trim() !== ""); // Remove empty lines
+                let lines = data.split('\n').filter(line => line.trim() !== ""); 
                 let notesList = document.getElementById("notesList");
                 notesList.innerHTML = "";
 
                 lines.forEach(line => {
                     let parts = line.split(",");
                     let title = parts[0].trim();
-                    let note = parts.slice(1).join(",").trim(); // Join back in case the note contains commas
+                    let note = parts.slice(1).join(",").trim(); 
                     
                     if (title && note) {
                         let li = document.createElement("li");
