@@ -8,16 +8,17 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
             background: #000;
             color: #fff;
             margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            overflow-y: auto;
         }
-        h1 {
+        h2 {
             margin-bottom: 20px;
         }
         ul {
@@ -41,8 +42,7 @@
             try {
                 let response = await fetch('comments.csv');
                 let data = await response.text();
-                
-                let lines = data.split('\n').slice(1); // Omitimos la primera línea si es un encabezado
+                let lines = data.split('\n').slice(1);
                 let commentsList = document.getElementById("commentsList");
                 commentsList.innerHTML = "";
                 
@@ -52,23 +52,23 @@
                         let li = document.createElement("li");
                         li.innerHTML = `<span class="titulo">${title}</span>`;
                         
-                let commentsArray = comment.split("&"); // Dividimos por '&'
-                commentsArray.forEach(text => {
-                    let container = document.createElement("span"); // Usamos un contenedor inline
-                    container.style.display = "inline-flex"; // Asegura que los elementos estén en línea y alineados
+                        let commentsArray = comment.split("&");
+                        commentsArray.forEach(text => {
+                            let container = document.createElement("span");
+                            container.style.display = "inline-flex";
                 
-                    let p = document.createElement("p");
-                    p.textContent = text;
-                    p.style.display = "inline"; // Para mantenerlo en la misma línea
+                            let p = document.createElement("p");
+                            p.textContent = text;
+                            p.style.display = "inline";
                 
-                    let checkbox = document.createElement("input");
-                    checkbox.type = "checkbox";
-                    checkbox.style.marginLeft = "5px"; // Espacio entre el texto y el checkbox
+                            let checkbox = document.createElement("input");
+                            checkbox.type = "checkbox";
+                            checkbox.style.marginLeft = "5px";
                 
-                    container.appendChild(p);
-                    container.appendChild(checkbox);
-                    li.appendChild(container);
-                    });
+                            container.appendChild(p);
+                            container.appendChild(checkbox);
+                            li.appendChild(container);
+                        });
                         
                         commentsList.appendChild(li);
                     }
