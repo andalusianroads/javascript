@@ -57,6 +57,10 @@
                             let p = document.createElement("p");
                             p.textContent = text;
                             li.appendChild(p);
+
+                            let checkbox = document.createElement("input");
+                            checkbox.type = "checkbox";
+                            li.appendChild(checkbox);
                         });
                         
                         commentsList.appendChild(li);
