@@ -32,6 +32,8 @@
         }
         .titulo {
             font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
         }
     </style>
     <script>
@@ -48,7 +50,15 @@
                     let [title, comment] = line.split(",");
                     if (title && comment) {
                         let li = document.createElement("li");
-                        li.innerHTML = `<span class="titulo">${title}</span><p>${comment}</p>`;
+                        li.innerHTML = `<span class="titulo">${title}</span>`;
+                        
+                        let commentsArray = comment.split("&"); // Dividimos por '&'
+                        commentsArray.forEach(text => {
+                            let p = document.createElement("p");
+                            p.textContent = text;
+                            li.appendChild(p);
+                        });
+                        
                         commentsList.appendChild(li);
                     }
                 });
