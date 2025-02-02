@@ -49,11 +49,11 @@
                 lines.forEach(line => {
                     let [title, comment] = line.split(",");
                     if (title && comment) {
-                        let li = document.createElement("li");
-                        li.innerHTML = `<span class="titulo">${title}</span>`;
-                        
                         let commentsArray = comment.split("&");
                         commentsArray.forEach(text => {
+                            let li = document.createElement("li");
+                            li.innerHTML = `<span class="titulo">${title}</span>`;
+
                             let container = document.createElement("span");
                             container.style.display = "inline-flex";
                 
@@ -68,9 +68,9 @@
                             container.appendChild(p);
                             container.appendChild(checkbox);
                             li.appendChild(container);
+                            
+                            commentsList.appendChild(li);
                         });
-                        
-                        commentsList.appendChild(li);
                     }
                 });
             } catch (error) {
