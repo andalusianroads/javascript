@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apuntes</title>
+    <title>Notes</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -31,63 +31,91 @@
             border-bottom: 1px solid #fff;
             padding: 10px;
         }
-        .titulo {
+        .title {
             font-weight: bold;
             display: block;
             margin-bottom: 5px;
         }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+        .checkbox-container p {
+            margin: 0;
+            flex: 1;
+        }
+        .hidden {
+            display: none;
+        }
+        #toggleCheckboxes {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #fff;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
     </style>
     <script>
-        async function loadComments() {
+        async function loadNotes() {
             try {
-                let response = await fetch('comments.csv');
+                let response = await fetch('notes.csv');
                 let data = await response.text();
                 let lines = data.split('\n').slice(1);
-                let commentsList = document.getElementById("commentsList");
-                commentsList.innerHTML = "";
+                let notesList = document.getElementById("notesList");
+                notesList.innerHTML = "";
                 
                 lines.forEach(line => {
-                    let [title, comment] = line.split(",");
-                    if (title && comment) {
+                    let [title, note] = line.split(",");
+                    if (title && note) {
                         let li = document.createElement("li");
                         let titleSpan = document.createElement("span");
-                        titleSpan.className = "titulo";
+                        titleSpan.className = "title";
                         titleSpan.textContent = title;
                         li.appendChild(titleSpan);
 
-                        let commentsArray = comment.split("&");
-                        commentsArray.forEach(text => {
+                        let notesArray = note.split("&");
+                        notesArray.forEach(text => {
                             let container = document.createElement("div");
-                            container.style.display = "flex";
-                            container.style.alignItems = "center";
-                            container.style.marginTop = "5px";
+                            container.className = "checkbox-container";
                 
                             let p = document.createElement("p");
                             p.textContent = text;
-                            p.style.margin = "0";
-                            p.style.flex = "1";
                 
                             let checkbox = document.createElement("input");
                             checkbox.type = "checkbox";
-                            checkbox.style.marginLeft = "10px";
+                            checkbox.className = "hidden"; 
                 
                             container.appendChild(p);
                             container.appendChild(checkbox);
                             li.appendChild(container);
                         });
                         
-                        commentsList.appendChild(li);
+                        notesList.appendChild(li);
                     }
                 });
             } catch (error) {
-                console.error("Error loading comments:", error);
+                console.error("Error loading notes:", error);
             }
         }
-        window.onload = loadComments;
+
+        function toggleCheckboxes() {
+            let checkboxes = document.querySelectorAll("input[type='checkbox']");
+            checkboxes.forEach(checkbox => {
+                checkbox.classList.toggle("hidden");
+            });
+        }
+
+        window.onload = loadNotes;
     </script>
 </head>
 <body>
-    <h2>Apuntes</h2>
-    <ul id="commentsList"></ul>
+    <h2>Notes</h2>
+    <ul id="notesList"></ul>
+    <button id="toggleCheckboxes" onclick="toggleCheckboxes()">Show/Hide Checkboxes</button>
 </body>
 </html>
