@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Asignación de Tareas</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-family: sans-serif;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    td.task-C {
+      background-color: #ffd1d1;
+    }
+  </style>
+</head>
+<body>
+  <h2>Asignación de Tareas por Persona y Día</h2>
+  <div id="tabla-container"></div>
+
+  <script>
+    const NUM_PEOPLE = 10;
+    const NUM_DAYS = 6;
+    const TASKS = ["A", "B", "C"];
+
+    class Person {
+      constructor(name) {
+        this.name = name;
+        this.assignments = Array(NUM_DAYS).fill("");
+      }
+
+      canDoTask(task, day) {
+        if (day > 0 && this.assignments[day - 1] === task) return false;
+        return true;
+      }
+
+      assign(task, day) {
+        this.assignments[day] = task;
+      }
+
+      getAssignment(day) {
+        return this.assignments[day];
+      }
+    }
+
+    function shuffle(array) {
+      return array.sort(() => Math.random() - 0.5);
+    }
+
+    function generarAsignaciones() {
+      const people = [];
+      for (let i = 1; i <= NUM_PEOPLE; i++) {
+        people.push(new Person(`Persona ${i}`));
+      }
+
+      for (let day = 0; day < NUM_DAYS; day++) {
+        const shuffledPeople = shuffle([...people]);
+        let assignedC = false;
+
+        // Asignar tarea C a una sola persona
+        for (let p of shuffledPeople) {
+          if (!assignedC && p.canDoTask("C", day)) {
+            p.assign("C", day);
+            assignedC = true;
+            break;
+          }
+        }
+
+        let countA = 0, countB = 0;
+
+        for (let p of people) {
+          if (p.getAssignment(day)) continue;
+
+          let possibleTasks = [];
+          if (p.canDoTask("A", day)) possibleTasks.push("A");
+          if (p.canDoTask("B", day)) possibleTasks.push("B");
+
+          if (countA > countB) possibleTasks = possibleTasks.filter(t => t !== "A");
+          else if (countB > countA) possibleTasks = possibleTasks.filter(t => t !== "B");
+
+          let task = possibleTasks.length > 0
+            ? possibleTasks[Math.floor(Math.random() * possibleTasks.length)]
+            : (countA <= countB ? "A" : "B");
+
+          p.assign(task, day);
+          if (task === "A") countA++;
+          else countB++;
+        }
+
+        // Validación opcional: console.log(`Día ${day+1} - A:${countA} B:${countB}`);
+      }
+
+      return people;
+    }
+
+    function construirTabla(people) {
+      const container = document.getElementById("tabla-container");
+      const table = document.createElement("table");
+
+      const thead = document.createElement("thead");
+      const headerRow = document.createElement("tr");
+      const thNombre = document.createElement("th");
+      thNombre.textContent = "Persona";
+      headerRow.appendChild(thNombre);
+
+      for (let d = 1; d <= NUM_DAYS; d++) {
+        const th = document.createElement("th");
+        th.textContent = `Día ${d}`;
+        headerRow.appendChild(th);
+      }
+
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+
+      const tbody = document.createElement("tbody");
+      for (let p of people) {
+        const row = document.createElement("tr");
+        const tdNombre = document.createElement("td");
+        tdNombre.textContent = p.name;
+        row.appendChild(tdNombre);
+
+        p.assignments.forEach(task => {
+          const td = document.createElement("td");
+          td.textContent = task;
+          if (task === "C") td.classList.add("task-C");
+          row.appendChild(td);
+        });
+
+        tbody.appendChild(row);
+      }
+
+      table.appendChild(tbody);
+      container.appendChild(table);
+    }
+
+    const personas = generarAsignaciones();
+    construirTabla(personas);
+  </script>
+</body>
+</html>
