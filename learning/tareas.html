@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Assignment</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    td.task-A {
+      background-color: #ccffcc; /* Light green for task A */
+    }
+    td.task-B {
+      background-color: #cce6ff; /* Light blue for task B */
+    }
+    td.task-C {
+      background-color: #ffd1d1; /* Light pink for task C */
+    }
+    td.total-cell {
+      background-color: #e0e0e0; /* Light gray for total cells */
+      font-weight: bold;
+    }
+    label, input, button {
+      font-size: 1rem;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Task Assignment by Person and Day</h2>
+
+  <label for="numPeople">Number of people:</label>
+  <input type="number" id="numPeople" value="5" min="3" max="50">
+  <button onclick="generateAndDisplay()">Generate Table</button>
+
+  <div id="table-container"></div>
+
+  <script>
+    const NUM_DAYS = 6;  // Number of working days
+    const TASKS = ["A", "B", "C"];  // Types of tasks
+
+    class Person {
+      constructor(name) {
+        this.name = name;
+        this.assignments = Array(NUM_DAYS).fill(""); // Task assignments initialized to empty
+      }
+
+      // Check if the person can do a task on a specific day
+      canDoTask(task, day) {
+        return this.assignments[day] === ""; // Person has no task on that day
+      }
+
+      // Assign a task to the person on a specific day
+      assign(task, day) {
+        this.assignments[day] = task;
+      }
+
+      // Get the task assigned to the person on a specific day
+      getAssignment(day) {
+        return this.assignments[day];
+      }
+
+      // Count how many times a person has done a specific task
+      taskCount(task) {
+        return this.assignments.filter(t => t === task).length;
+      }
+
+      // Check how many times the person has done task C (max twice if fewer than 6 people)
+      canDoC(numPeople) {
+        return this.taskCount("C") < (numPeople < 6 ? 2 : 1); // With fewer than 6, can do C up to twice
+      }
+    }
+
+    function shuffle(array) {
+      return array.sort(() => Math.random() - 0.5);
+    }
+
+    function generateAssignments(numPeople) {
+      const people = [];
+      for (let i = 1; i <= numPeople; i++) {
+        people.push(new Person(`Person ${i}`));
+      }
+
+      // Assign task C: one person per day
+      let assignedPeopleC = new Set(); // Track who did C
+
+      if (numPeople < 6) {
+        // Fewer than 6 people: everyone does C at least once, max twice
+        let peopleQueue = shuffle([...people]);
+        let day = 0;
+
+        // First, ensure everyone does C at least once
+        for (let p of peopleQueue) {
+          if (day < NUM_DAYS && p.canDoC(numPeople) && p.canDoTask("C", day)) {
+            p.assign("C", day);
+            assignedPeopleC.add(p.name);
+            day++;
+          }
+        }
+
+        // Complete remaining days with C, max twice per person
+        for (; day < NUM_DAYS; day++) {
+          let availablePeople = shuffle(people.filter(p => p.canDoC(numPeople) && p.canDoTask("C", day)));
+          if (availablePeople.length > 0) {
+            let p = availablePeople[0];
+            p.assign("C", day);
+            assignedPeopleC.add(p.name);
+          }
+        }
+      } else {
+        // 6 or more people: max 1 C per person
+        let availablePeople = shuffle([...people]);
+        for (let day = 0; day < NUM_DAYS && availablePeople.length > 0; day++) {
+          let p = availablePeople.shift(); // Take a person who hasn’t done C
+          if (p.canDoTask("C", day)) {
+            p.assign("C", day);
+            assignedPeopleC.add(p.name);
+          }
+        }
+      }
+
+      // Assign tasks A and B: balance by day and by person
+      for (let day = 0; day < NUM_DAYS; day++) {
+        let countA = 0, countB = 0;
+        let availablePeople = shuffle(people.filter(p => p.canDoTask("A", day))); // People without a task on this day
+        let numTasks = availablePeople.length; // Number of A/B tasks to assign
+        let targetA = Math.ceil(numTasks / 2); // Target for A (half or half+1)
+        let targetB = Math.floor(numTasks / 2); // Target for B (half or half-1)
+
+        for (let p of availablePeople) {
+          let personCountA = p.taskCount("A");
+          let personCountB = p.taskCount("B");
+
+          let possibleTasks = [];
+          // Prefer task based on per-person balance
+          if (personCountA < personCountB) {
+            possibleTasks.push("A");
+          } else if (personCountB < personCountA) {
+            possibleTasks.push("B");
+          } else {
+            possibleTasks = ["A", "B"];
+          }
+
+          // Respect daily balance
+          if (countA >= targetA) {
+            possibleTasks = possibleTasks.filter(t => t === "B");
+          } else if (countB >= targetB) {
+            possibleTasks = possibleTasks.filter(t => t === "A");
+          }
+
+          // Choose task
+          let task = possibleTasks.length > 0
+            ? possibleTasks[Math.floor(Math.random() * possibleTasks.length)]
+            : (countA < targetA ? "A" : "B");
+
+          p.assign(task, day);
+          if (task === "A") countA++;
+          else countB++;
+        }
+      }
+
+      // Adjust per-person balance without breaking daily balance
+      for (let p of people) {
+        let countA = p.taskCount("A");
+        let countB = p.taskCount("B");
+        let retries = 0;
+        const maxRetries = 10; // Avoid infinite loops
+
+        while (Math.abs(countA - countB) > 1 && retries < maxRetries) {
+          for (let day = 0; day < NUM_DAYS; day++) {
+            let dayCountA = people.filter(person => person.getAssignment(day) === "A").length;
+            let dayCountB = people.filter(person => person.getAssignment(day) === "B").length;
+            let numTasks = people.filter(person => person.getAssignment(day) === "A" || person.getAssignment(day) === "B").length;
+            let targetA = Math.ceil(numTasks / 2);
+            let targetB = Math.floor(numTasks / 2);
+
+            if (countA > countB + 1 && p.getAssignment(day) === "A" && dayCountA > dayCountB && dayCountB < targetB) {
+              p.assign("B", day);
+              countA--;
+              countB++;
+              break;
+            } else if (countB > countA + 1 && p.getAssignment(day) === "B" && dayCountB > dayCountA && dayCountA < targetA) {
+              p.assign("A", day);
+              countB--;
+              countA++;
+              break;
+            }
+          }
+          retries++;
+        }
+      }
+
+      return people;
+    }
+
+    function buildTable(people) {
+      const container = document.getElementById("table-container");
+      container.innerHTML = "";
+      if (people.length === 0) return;
+
+      const table = document.createElement("table");
+
+      // Header
+      const thead = document.createElement("thead");
+      const headerRow = document.createElement("tr");
+      const thName = document.createElement("th");
+      thName.textContent = "Person";
+      headerRow.appendChild(thName);
+
+      for (let d = 1; d <= NUM_DAYS; d++) {
+        const th = document.createElement("th");
+        th.textContent = `Day ${d}`;
+        headerRow.appendChild(th);
+      }
+
+      const thTotal = document.createElement("th");
+      thTotal.textContent = "Total A B C";
+      headerRow.appendChild(thTotal);
+
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+
+      // Body
+      const tbody = document.createElement("tbody");
+      for (let p of people) {
+        const row = document.createElement("tr");
+        const tdName = document.createElement("td");
+        tdName.textContent = p.name;
+        row.appendChild(tdName);
+
+        // Task cells
+        p.assignments.forEach(task => {
+          const td = document.createElement("td");
+          td.textContent = task;
+          if (task === "A") td.classList.add("task-A");
+          else if (task === "B") td.classList.add("task-B");
+          else if (task === "C") td.classList.add("task-C");
+          row.appendChild(td);
+        });
+
+        // Total per person cell
+        const tdTotal = document.createElement("td");
+        tdTotal.textContent = `A: ${p.taskCount("A")} B: ${p.taskCount("B")} C: ${p.taskCount("C")}`;
+        tdTotal.classList.add("total-cell");
+        row.appendChild(tdTotal);
+
+        tbody.appendChild(row);
+      }
+
+      // Row for totals per day
+      const totalRow = document.createElement("tr");
+      const tdTotalLabel = document.createElement("td");
+      tdTotalLabel.textContent = "Total per day";
+      tdTotalLabel.classList.add("total-cell");
+      totalRow.appendChild(tdTotalLabel);
+
+      let grandTotalA = 0, grandTotalB = 0, grandTotalC = 0;
+      for (let day = 0; day < NUM_DAYS; day++) {
+        const dayCountA = people.filter(p => p.getAssignment(day) === "A").length;
+        const dayCountB = people.filter(p => p.getAssignment(day) === "B").length;
+        const dayCountC = people.filter(p => p.getAssignment(day) === "C").length;
+        grandTotalA += dayCountA;
+        grandTotalB += dayCountB;
+        grandTotalC += dayCountC;
+
+        const tdDayTotal = document.createElement("td");
+        tdDayTotal.textContent = `A: ${dayCountA} B: ${dayCountB} C: ${dayCountC}`;
+        tdDayTotal.classList.add("total-cell");
+        totalRow.appendChild(tdDayTotal);
+      }
+
+      // Grand total cell
+      const tdGrandTotal = document.createElement("td");
+      tdGrandTotal.textContent = `A: ${grandTotalA} B: ${grandTotalB} C: ${grandTotalC}`;
+      tdGrandTotal.classList.add("total-cell");
+      totalRow.appendChild(tdGrandTotal);
+
+      tbody.appendChild(totalRow);
+      table.appendChild(tbody);
+      container.appendChild(table);
+    }
+
+    function generateAndDisplay() {
+      const input = document.getElementById("numPeople");
+      const num = parseInt(input.value, 10);
+      if (isNaN(num) || num < 3 || num > 50) {
+        alert("Enter a valid number between 3 and 50");
+        return;
+      }
+
+      const people = generateAssignments(num);
+      buildTable(people);
+    }
+
+    window.onload = generateAndDisplay;
+  </script>
+</body>
+</html>
