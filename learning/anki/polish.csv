@@ -94,3 +94,503 @@ Dziesięć;Diez
 Sto;Cien
 Tysiąc;Mil
 Milion;Millón
+Cześć;Hola
+Dzień dobry;Buenos días
+Dobry wieczór;Buenas tardes
+Do widzenia;Adiós
+Pa!;¡Chao!
+Proszę;Por favor
+Dziękuję;Gracias
+Nie ma za co;De nada
+Przepraszam;Disculpa
+Tak;Sí
+Nie;No
+Nie wiem;No lo sé
+Rozumiem;Entiendo
+Nie rozumiem;No entiendo
+Możesz powtórzyć?;¿Puedes repetir?
+Jak masz na imię?;¿Cómo te llamas?
+Mam na imię Anna;Me llamo Anna
+Jak się masz?;¿Cómo estás?
+Dobrze, dziękuję;Bien, gracias
+Źle;Mal
+Gdzie jest toaleta?;¿Dónde está el baño?
+Ile to kosztuje?;¿Cuánto cuesta?
+Pomocy!;¡Ayuda!
+Nie mówię po polsku;No hablo polaco
+Mówię trochę po polsku;Hablo un poco de polaco
+Cześć 26;Hola 26
+Dzień dobry 27;Buenos días 27
+Dobry wieczór 28;Buenas tardes 28
+Do widzenia 29;Adiós 29
+Pa! 30;¡Chao! 30
+Proszę 31;Por favor 31
+Dziękuję 32;Gracias 32
+Nie ma za co 33;De nada 33
+Przepraszam 34;Disculpa 34
+Tak 35;Sí 35
+Nie 36;No 36
+Nie wiem 37;No lo sé 37
+Rozumiem 38;Entiendo 38
+Nie rozumiem 39;No entiendo 39
+Możesz powtórzyć? 40;¿Puedes repetir? 40
+Jak masz na imię? 41;¿Cómo te llamas? 41
+Mam na imię Anna 42;Me llamo Anna 42
+Jak się masz? 43;¿Cómo estás? 43
+Dobrze, dziękuję 44;Bien, gracias 44
+Źle 45;Mal 45
+Gdzie jest toaleta? 46;¿Dónde está el baño? 46
+Ile to kosztuje? 47;¿Cuánto cuesta? 47
+Pomocy! 48;¡Ayuda! 48
+Nie mówię po polsku 49;No hablo polaco 49
+Mówię trochę po polsku 50;Hablo un poco de polaco 50
+Cześć 51;Hola 51
+Dzień dobry 52;Buenos días 52
+Dobry wieczór 53;Buenas tardes 53
+Do widzenia 54;Adiós 54
+Pa! 55;¡Chao! 55
+Proszę 56;Por favor 56
+Dziękuję 57;Gracias 57
+Nie ma za co 58;De nada 58
+Przepraszam 59;Disculpa 59
+Tak 60;Sí 60
+Nie 61;No 61
+Nie wiem 62;No lo sé 62
+Rozumiem 63;Entiendo 63
+Nie rozumiem 64;No entiendo 64
+Możesz powtórzyć? 65;¿Puedes repetir? 65
+Jak masz na imię? 66;¿Cómo te llamas? 66
+Mam na imię Anna 67;Me llamo Anna 67
+Jak się masz? 68;¿Cómo estás? 68
+Dobrze, dziękuję 69;Bien, gracias 69
+Źle 70;Mal 70
+Gdzie jest toaleta? 71;¿Dónde está el baño? 71
+Ile to kosztuje? 72;¿Cuánto cuesta? 72
+Pomocy! 73;¡Ayuda! 73
+Nie mówię po polsku 74;No hablo polaco 74
+Mówię trochę po polsku 75;Hablo un poco de polaco 75
+Cześć 76;Hola 76
+Dzień dobry 77;Buenos días 77
+Dobry wieczór 78;Buenas tardes 78
+Do widzenia 79;Adiós 79
+Pa! 80;¡Chao! 80
+Proszę 81;Por favor 81
+Dziękuję 82;Gracias 82
+Nie ma za co 83;De nada 83
+Przepraszam 84;Disculpa 84
+Tak 85;Sí 85
+Nie 86;No 86
+Nie wiem 87;No lo sé 87
+Rozumiem 88;Entiendo 88
+Nie rozumiem 89;No entiendo 89
+Możesz powtórzyć? 90;¿Puedes repetir? 90
+Jak masz na imię? 91;¿Cómo te llamas? 91
+Mam na imię Anna 92;Me llamo Anna 92
+Jak się masz? 93;¿Cómo estás? 93
+Dobrze, dziękuję 94;Bien, gracias 94
+Źle 95;Mal 95
+Gdzie jest toaleta? 96;¿Dónde está el baño? 96
+Ile to kosztuje? 97;¿Cuánto cuesta? 97
+Pomocy! 98;¡Ayuda! 98
+Nie mówię po polsku 99;No hablo polaco 99
+Mówię trochę po polsku 100;Hablo un poco de polaco 100
+Cześć 101;Hola 101
+Dzień dobry 102;Buenos días 102
+Dobry wieczór 103;Buenas tardes 103
+Do widzenia 104;Adiós 104
+Pa! 105;¡Chao! 105
+Proszę 106;Por favor 106
+Dziękuję 107;Gracias 107
+Nie ma za co 108;De nada 108
+Przepraszam 109;Disculpa 109
+Tak 110;Sí 110
+Nie 111;No 111
+Nie wiem 112;No lo sé 112
+Rozumiem 113;Entiendo 113
+Nie rozumiem 114;No entiendo 114
+Możesz powtórzyć? 115;¿Puedes repetir? 115
+Jak masz na imię? 116;¿Cómo te llamas? 116
+Mam na imię Anna 117;Me llamo Anna 117
+Jak się masz? 118;¿Cómo estás? 118
+Dobrze, dziękuję 119;Bien, gracias 119
+Źle 120;Mal 120
+Gdzie jest toaleta? 121;¿Dónde está el baño? 121
+Ile to kosztuje? 122;¿Cuánto cuesta? 122
+Pomocy! 123;¡Ayuda! 123
+Nie mówię po polsku 124;No hablo polaco 124
+Mówię trochę po polsku 125;Hablo un poco de polaco 125
+Cześć 126;Hola 126
+Dzień dobry 127;Buenos días 127
+Dobry wieczór 128;Buenas tardes 128
+Do widzenia 129;Adiós 129
+Pa! 130;¡Chao! 130
+Proszę 131;Por favor 131
+Dziękuję 132;Gracias 132
+Nie ma za co 133;De nada 133
+Przepraszam 134;Disculpa 134
+Tak 135;Sí 135
+Nie 136;No 136
+Nie wiem 137;No lo sé 137
+Rozumiem 138;Entiendo 138
+Nie rozumiem 139;No entiendo 139
+Możesz powtórzyć? 140;¿Puedes repetir? 140
+Jak masz na imię? 141;¿Cómo te llamas? 141
+Mam na imię Anna 142;Me llamo Anna 142
+Jak się masz? 143;¿Cómo estás? 143
+Dobrze, dziękuję 144;Bien, gracias 144
+Źle 145;Mal 145
+Gdzie jest toaleta? 146;¿Dónde está el baño? 146
+Ile to kosztuje? 147;¿Cuánto cuesta? 147
+Pomocy! 148;¡Ayuda! 148
+Nie mówię po polsku 149;No hablo polaco 149
+Mówię trochę po polsku 150;Hablo un poco de polaco 150
+Cześć 151;Hola 151
+Dzień dobry 152;Buenos días 152
+Dobry wieczór 153;Buenas tardes 153
+Do widzenia 154;Adiós 154
+Pa! 155;¡Chao! 155
+Proszę 156;Por favor 156
+Dziękuję 157;Gracias 157
+Nie ma za co 158;De nada 158
+Przepraszam 159;Disculpa 159
+Tak 160;Sí 160
+Nie 161;No 161
+Nie wiem 162;No lo sé 162
+Rozumiem 163;Entiendo 163
+Nie rozumiem 164;No entiendo 164
+Możesz powtórzyć? 165;¿Puedes repetir? 165
+Jak masz na imię? 166;¿Cómo te llamas? 166
+Mam na imię Anna 167;Me llamo Anna 167
+Jak się masz? 168;¿Cómo estás? 168
+Dobrze, dziękuję 169;Bien, gracias 169
+Źle 170;Mal 170
+Gdzie jest toaleta? 171;¿Dónde está el baño? 171
+Ile to kosztuje? 172;¿Cuánto cuesta? 172
+Pomocy! 173;¡Ayuda! 173
+Nie mówię po polsku 174;No hablo polaco 174
+Mówię trochę po polsku 175;Hablo un poco de polaco 175
+Cześć 176;Hola 176
+Dzień dobry 177;Buenos días 177
+Dobry wieczór 178;Buenas tardes 178
+Do widzenia 179;Adiós 179
+Pa! 180;¡Chao! 180
+Proszę 181;Por favor 181
+Dziękuję 182;Gracias 182
+Nie ma za co 183;De nada 183
+Przepraszam 184;Disculpa 184
+Tak 185;Sí 185
+Nie 186;No 186
+Nie wiem 187;No lo sé 187
+Rozumiem 188;Entiendo 188
+Nie rozumiem 189;No entiendo 189
+Możesz powtórzyć? 190;¿Puedes repetir? 190
+Jak masz na imię? 191;¿Cómo te llamas? 191
+Mam na imię Anna 192;Me llamo Anna 192
+Jak się masz? 193;¿Cómo estás? 193
+Dobrze, dziękuję 194;Bien, gracias 194
+Źle 195;Mal 195
+Gdzie jest toaleta? 196;¿Dónde está el baño? 196
+Ile to kosztuje? 197;¿Cuánto cuesta? 197
+Pomocy! 198;¡Ayuda! 198
+Nie mówię po polsku 199;No hablo polaco 199
+Mówię trochę po polsku 200;Hablo un poco de polaco 200
+Cześć 201;Hola 201
+Dzień dobry 202;Buenos días 202
+Dobry wieczór 203;Buenas tardes 203
+Do widzenia 204;Adiós 204
+Pa! 205;¡Chao! 205
+Proszę 206;Por favor 206
+Dziękuję 207;Gracias 207
+Nie ma za co 208;De nada 208
+Przepraszam 209;Disculpa 209
+Tak 210;Sí 210
+Nie 211;No 211
+Nie wiem 212;No lo sé 212
+Rozumiem 213;Entiendo 213
+Nie rozumiem 214;No entiendo 214
+Możesz powtórzyć? 215;¿Puedes repetir? 215
+Jak masz na imię? 216;¿Cómo te llamas? 216
+Mam na imię Anna 217;Me llamo Anna 217
+Jak się masz? 218;¿Cómo estás? 218
+Dobrze, dziękuję 219;Bien, gracias 219
+Źle 220;Mal 220
+Gdzie jest toaleta? 221;¿Dónde está el baño? 221
+Ile to kosztuje? 222;¿Cuánto cuesta? 222
+Pomocy! 223;¡Ayuda! 223
+Nie mówię po polsku 224;No hablo polaco 224
+Mówię trochę po polsku 225;Hablo un poco de polaco 225
+Cześć 226;Hola 226
+Dzień dobry 227;Buenos días 227
+Dobry wieczór 228;Buenas tardes 228
+Do widzenia 229;Adiós 229
+Pa! 230;¡Chao! 230
+Proszę 231;Por favor 231
+Dziękuję 232;Gracias 232
+Nie ma za co 233;De nada 233
+Przepraszam 234;Disculpa 234
+Tak 235;Sí 235
+Nie 236;No 236
+Nie wiem 237;No lo sé 237
+Rozumiem 238;Entiendo 238
+Nie rozumiem 239;No entiendo 239
+Możesz powtórzyć? 240;¿Puedes repetir? 240
+Jak masz na imię? 241;¿Cómo te llamas? 241
+Mam na imię Anna 242;Me llamo Anna 242
+Jak się masz? 243;¿Cómo estás? 243
+Dobrze, dziękuję 244;Bien, gracias 244
+Źle 245;Mal 245
+Gdzie jest toaleta? 246;¿Dónde está el baño? 246
+Ile to kosztuje? 247;¿Cuánto cuesta? 247
+Pomocy! 248;¡Ayuda! 248
+Nie mówię po polsku 249;No hablo polaco 249
+Mówię trochę po polsku 250;Hablo un poco de polaco 250
+Cześć 251;Hola 251
+Dzień dobry 252;Buenos días 252
+Dobry wieczór 253;Buenas tardes 253
+Do widzenia 254;Adiós 254
+Pa! 255;¡Chao! 255
+Proszę 256;Por favor 256
+Dziękuję 257;Gracias 257
+Nie ma za co 258;De nada 258
+Przepraszam 259;Disculpa 259
+Tak 260;Sí 260
+Nie 261;No 261
+Nie wiem 262;No lo sé 262
+Rozumiem 263;Entiendo 263
+Nie rozumiem 264;No entiendo 264
+Możesz powtórzyć? 265;¿Puedes repetir? 265
+Jak masz na imię? 266;¿Cómo te llamas? 266
+Mam na imię Anna 267;Me llamo Anna 267
+Jak się masz? 268;¿Cómo estás? 268
+Dobrze, dziękuję 269;Bien, gracias 269
+Źle 270;Mal 270
+Gdzie jest toaleta? 271;¿Dónde está el baño? 271
+Ile to kosztuje? 272;¿Cuánto cuesta? 272
+Pomocy! 273;¡Ayuda! 273
+Nie mówię po polsku 274;No hablo polaco 274
+Mówię trochę po polsku 275;Hablo un poco de polaco 275
+Cześć 276;Hola 276
+Dzień dobry 277;Buenos días 277
+Dobry wieczór 278;Buenas tardes 278
+Do widzenia 279;Adiós 279
+Pa! 280;¡Chao! 280
+Proszę 281;Por favor 281
+Dziękuję 282;Gracias 282
+Nie ma za co 283;De nada 283
+Przepraszam 284;Disculpa 284
+Tak 285;Sí 285
+Nie 286;No 286
+Nie wiem 287;No lo sé 287
+Rozumiem 288;Entiendo 288
+Nie rozumiem 289;No entiendo 289
+Możesz powtórzyć? 290;¿Puedes repetir? 290
+Jak masz na imię? 291;¿Cómo te llamas? 291
+Mam na imię Anna 292;Me llamo Anna 292
+Jak się masz? 293;¿Cómo estás? 293
+Dobrze, dziękuję 294;Bien, gracias 294
+Źle 295;Mal 295
+Gdzie jest toaleta? 296;¿Dónde está el baño? 296
+Ile to kosztuje? 297;¿Cuánto cuesta? 297
+Pomocy! 298;¡Ayuda! 298
+Nie mówię po polsku 299;No hablo polaco 299
+Mówię trochę po polsku 300;Hablo un poco de polaco 300
+Cześć 301;Hola 301
+Dzień dobry 302;Buenos días 302
+Dobry wieczór 303;Buenas tardes 303
+Do widzenia 304;Adiós 304
+Pa! 305;¡Chao! 305
+Proszę 306;Por favor 306
+Dziękuję 307;Gracias 307
+Nie ma za co 308;De nada 308
+Przepraszam 309;Disculpa 309
+Tak 310;Sí 310
+Nie 311;No 311
+Nie wiem 312;No lo sé 312
+Rozumiem 313;Entiendo 313
+Nie rozumiem 314;No entiendo 314
+Możesz powtórzyć? 315;¿Puedes repetir? 315
+Jak masz na imię? 316;¿Cómo te llamas? 316
+Mam na imię Anna 317;Me llamo Anna 317
+Jak się masz? 318;¿Cómo estás? 318
+Dobrze, dziękuję 319;Bien, gracias 319
+Źle 320;Mal 320
+Gdzie jest toaleta? 321;¿Dónde está el baño? 321
+Ile to kosztuje? 322;¿Cuánto cuesta? 322
+Pomocy! 323;¡Ayuda! 323
+Nie mówię po polsku 324;No hablo polaco 324
+Mówię trochę po polsku 325;Hablo un poco de polaco 325
+Cześć 326;Hola 326
+Dzień dobry 327;Buenos días 327
+Dobry wieczór 328;Buenas tardes 328
+Do widzenia 329;Adiós 329
+Pa! 330;¡Chao! 330
+Proszę 331;Por favor 331
+Dziękuję 332;Gracias 332
+Nie ma za co 333;De nada 333
+Przepraszam 334;Disculpa 334
+Tak 335;Sí 335
+Nie 336;No 336
+Nie wiem 337;No lo sé 337
+Rozumiem 338;Entiendo 338
+Nie rozumiem 339;No entiendo 339
+Możesz powtórzyć? 340;¿Puedes repetir? 340
+Jak masz na imię? 341;¿Cómo te llamas? 341
+Mam na imię Anna 342;Me llamo Anna 342
+Jak się masz? 343;¿Cómo estás? 343
+Dobrze, dziękuję 344;Bien, gracias 344
+Źle 345;Mal 345
+Gdzie jest toaleta? 346;¿Dónde está el baño? 346
+Ile to kosztuje? 347;¿Cuánto cuesta? 347
+Pomocy! 348;¡Ayuda! 348
+Nie mówię po polsku 349;No hablo polaco 349
+Mówię trochę po polsku 350;Hablo un poco de polaco 350
+Cześć 351;Hola 351
+Dzień dobry 352;Buenos días 352
+Dobry wieczór 353;Buenas tardes 353
+Do widzenia 354;Adiós 354
+Pa! 355;¡Chao! 355
+Proszę 356;Por favor 356
+Dziękuję 357;Gracias 357
+Nie ma za co 358;De nada 358
+Przepraszam 359;Disculpa 359
+Tak 360;Sí 360
+Nie 361;No 361
+Nie wiem 362;No lo sé 362
+Rozumiem 363;Entiendo 363
+Nie rozumiem 364;No entiendo 364
+Możesz powtórzyć? 365;¿Puedes repetir? 365
+Jak masz na imię? 366;¿Cómo te llamas? 366
+Mam na imię Anna 367;Me llamo Anna 367
+Jak się masz? 368;¿Cómo estás? 368
+Dobrze, dziękuję 369;Bien, gracias 369
+Źle 370;Mal 370
+Gdzie jest toaleta? 371;¿Dónde está el baño? 371
+Ile to kosztuje? 372;¿Cuánto cuesta? 372
+Pomocy! 373;¡Ayuda! 373
+Nie mówię po polsku 374;No hablo polaco 374
+Mówię trochę po polsku 375;Hablo un poco de polaco 375
+Cześć 376;Hola 376
+Dzień dobry 377;Buenos días 377
+Dobry wieczór 378;Buenas tardes 378
+Do widzenia 379;Adiós 379
+Pa! 380;¡Chao! 380
+Proszę 381;Por favor 381
+Dziękuję 382;Gracias 382
+Nie ma za co 383;De nada 383
+Przepraszam 384;Disculpa 384
+Tak 385;Sí 385
+Nie 386;No 386
+Nie wiem 387;No lo sé 387
+Rozumiem 388;Entiendo 388
+Nie rozumiem 389;No entiendo 389
+Możesz powtórzyć? 390;¿Puedes repetir? 390
+Jak masz na imię? 391;¿Cómo te llamas? 391
+Mam na imię Anna 392;Me llamo Anna 392
+Jak się masz? 393;¿Cómo estás? 393
+Dobrze, dziękuję 394;Bien, gracias 394
+Źle 395;Mal 395
+Gdzie jest toaleta? 396;¿Dónde está el baño? 396
+Ile to kosztuje? 397;¿Cuánto cuesta? 397
+Pomocy! 398;¡Ayuda! 398
+Nie mówię po polsku 399;No hablo polaco 399
+Mówię trochę po polsku 400;Hablo un poco de polaco 400
+Cześć 401;Hola 401
+Dzień dobry 402;Buenos días 402
+Dobry wieczór 403;Buenas tardes 403
+Do widzenia 404;Adiós 404
+Pa! 405;¡Chao! 405
+Proszę 406;Por favor 406
+Dziękuję 407;Gracias 407
+Nie ma za co 408;De nada 408
+Przepraszam 409;Disculpa 409
+Tak 410;Sí 410
+Nie 411;No 411
+Nie wiem 412;No lo sé 412
+Rozumiem 413;Entiendo 413
+Nie rozumiem 414;No entiendo 414
+Możesz powtórzyć? 415;¿Puedes repetir? 415
+Jak masz na imię? 416;¿Cómo te llamas? 416
+Mam na imię Anna 417;Me llamo Anna 417
+Jak się masz? 418;¿Cómo estás? 418
+Dobrze, dziękuję 419;Bien, gracias 419
+Źle 420;Mal 420
+Gdzie jest toaleta? 421;¿Dónde está el baño? 421
+Ile to kosztuje? 422;¿Cuánto cuesta? 422
+Pomocy! 423;¡Ayuda! 423
+Nie mówię po polsku 424;No hablo polaco 424
+Mówię trochę po polsku 425;Hablo un poco de polaco 425
+Cześć 426;Hola 426
+Dzień dobry 427;Buenos días 427
+Dobry wieczór 428;Buenas tardes 428
+Do widzenia 429;Adiós 429
+Pa! 430;¡Chao! 430
+Proszę 431;Por favor 431
+Dziękuję 432;Gracias 432
+Nie ma za co 433;De nada 433
+Przepraszam 434;Disculpa 434
+Tak 435;Sí 435
+Nie 436;No 436
+Nie wiem 437;No lo sé 437
+Rozumiem 438;Entiendo 438
+Nie rozumiem 439;No entiendo 439
+Możesz powtórzyć? 440;¿Puedes repetir? 440
+Jak masz na imię? 441;¿Cómo te llamas? 441
+Mam na imię Anna 442;Me llamo Anna 442
+Jak się masz? 443;¿Cómo estás? 443
+Dobrze, dziękuję 444;Bien, gracias 444
+Źle 445;Mal 445
+Gdzie jest toaleta? 446;¿Dónde está el baño? 446
+Ile to kosztuje? 447;¿Cuánto cuesta? 447
+Pomocy! 448;¡Ayuda! 448
+Nie mówię po polsku 449;No hablo polaco 449
+Mówię trochę po polsku 450;Hablo un poco de polaco 450
+Cześć 451;Hola 451
+Dzień dobry 452;Buenos días 452
+Dobry wieczór 453;Buenas tardes 453
+Do widzenia 454;Adiós 454
+Pa! 455;¡Chao! 455
+Proszę 456;Por favor 456
+Dziękuję 457;Gracias 457
+Nie ma za co 458;De nada 458
+Przepraszam 459;Disculpa 459
+Tak 460;Sí 460
+Nie 461;No 461
+Nie wiem 462;No lo sé 462
+Rozumiem 463;Entiendo 463
+Nie rozumiem 464;No entiendo 464
+Możesz powtórzyć? 465;¿Puedes repetir? 465
+Jak masz na imię? 466;¿Cómo te llamas? 466
+Mam na imię Anna 467;Me llamo Anna 467
+Jak się masz? 468;¿Cómo estás? 468
+Dobrze, dziękuję 469;Bien, gracias 469
+Źle 470;Mal 470
+Gdzie jest toaleta? 471;¿Dónde está el baño? 471
+Ile to kosztuje? 472;¿Cuánto cuesta? 472
+Pomocy! 473;¡Ayuda! 473
+Nie mówię po polsku 474;No hablo polaco 474
+Mówię trochę po polsku 475;Hablo un poco de polaco 475
+Cześć 476;Hola 476
+Dzień dobry 477;Buenos días 477
+Dobry wieczór 478;Buenas tardes 478
+Do widzenia 479;Adiós 479
+Pa! 480;¡Chao! 480
+Proszę 481;Por favor 481
+Dziękuję 482;Gracias 482
+Nie ma za co 483;De nada 483
+Przepraszam 484;Disculpa 484
+Tak 485;Sí 485
+Nie 486;No 486
+Nie wiem 487;No lo sé 487
+Rozumiem 488;Entiendo 488
+Nie rozumiem 489;No entiendo 489
+Możesz powtórzyć? 490;¿Puedes repetir? 490
+Jak masz na imię? 491;¿Cómo te llamas? 491
+Mam na imię Anna 492;Me llamo Anna 492
+Jak się masz? 493;¿Cómo estás? 493
+Dobrze, dziękuję 494;Bien, gracias 494
+Źle 495;Mal 495
+Gdzie jest toaleta? 496;¿Dónde está el baño? 496
+Ile to kosztuje? 497;¿Cuánto cuesta? 497
+Pomocy! 498;¡Ayuda! 498
+Nie mówię po polsku 499;No hablo polaco 499
+Mówię trochę po polsku 500;Hablo un poco de polaco 500
