@@ -113,9 +113,9 @@
     }
 
     function nextCard() {
-      currentIndex = (currentIndex + 1) % cards.length;
-      showCard(currentIndex);
-    }
+    currentIndex = Math.floor(Math.random() * cards.length);
+    showCard(currentIndex);
+  }
 
     loadCSV();
   </script>
