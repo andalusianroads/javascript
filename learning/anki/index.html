@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarjetas tipo Anki - Polaco</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 30px;
+      width: 400px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="card">
+    <div id="question">Cargando tarjetas...</div>
+    <div id="answer" style="display: none; margin-top: 20px; font-weight: bold;"></div>
+  </div>
+  <div>
+    <button onclick="showAnswer()">Mostrar respuesta</button>
+    <button onclick="nextCard()">Siguiente</button>
+  </div>
+
+  <script>
+    let cards = [];
+    let currentIndex = 0;
+    let showingAnswer = false;
+
+    async function loadCSV() {
+      try {
+        const response = await fetch('polish.csv');
+        const text = await response.text();
+        const lines = text.trim().split('\n');
+        cards = lines.map(line => {
+          const [question, answer] = line.split(';');
+          return { question: question.trim(), answer: answer.trim() };
+        });
+        if (cards.length > 0) {
+          showCard(0);
+        } else {
+          document.getElementById('question').innerText = "No se encontraron tarjetas.";
+        }
+      } catch (err) {
+        document.getElementById('question').innerText = "Error al cargar polish.csv";
+        console.error("Error cargando CSV:", err);
+      }
+    }
+
+    function showCard(index) {
+      const card = cards[index];
+      document.getElementById('question').innerText = card.question;
+      document.getElementById('answer').innerText = card.answer;
+      document.getElementById('answer').style.display = "none";
+      showingAnswer = false;
+    }
+
+    function showAnswer() {
+      if (!showingAnswer) {
+        document.getElementById('answer').style.display = "block";
+        showingAnswer = true;
+      }
+    }
+
+    function nextCard() {
+      currentIndex = (currentIndex + 1) % cards.length;
+      showCard(currentIndex);
+    }
+
+    // Cargar CSV al iniciar
+    loadCSV();
+  </script>
+</body>
+</html>
