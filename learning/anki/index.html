@@ -2,33 +2,58 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tarjetas tipo Anki - Polaco</title>
   <style>
     body {
+      background-color: #121212;
+      color: white;
       font-family: sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 100px;
+      margin-top: 50px;
     }
     .card {
-      border: 1px solid #ccc;
+      background-color: #1e1e1e;
+      border: 1px solid #333;
       border-radius: 10px;
       padding: 30px;
       width: 400px;
       text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
       margin-bottom: 20px;
     }
     button {
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
       padding: 10px 20px;
       margin: 5px;
       font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    select {
+      background-color: #1e1e1e;
+      color: white;
+      border: 1px solid #444;
+      padding: 5px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
+  <h1>Tarjetas tipo Anki - Polaco</h1>
+  <label for="languageOrder">Selecciona el idioma que deseas ver primero:</label>
+  <select id="languageOrder" onchange="updateLanguageOrder()">
+    <option value="pl">Polaco primero</option>
+    <option value="es">Español primero</option>
+  </select>
+
   <div class="card" id="card">
     <div id="question">Cargando tarjetas...</div>
     <div id="answer" style="display: none; margin-top: 20px; font-weight: bold;"></div>
@@ -42,6 +67,7 @@
     let cards = [];
     let currentIndex = 0;
     let showingAnswer = false;
+    let languageOrder = 'pl'; // 'pl' para polaco primero, 'es' para español primero
 
     async function loadCSV() {
       try {
@@ -49,8 +75,8 @@
         const text = await response.text();
         const lines = text.trim().split('\n');
         cards = lines.map(line => {
-          const [question, answer] = line.split(';');
-          return { question: question.trim(), answer: answer.trim() };
+          const [polish, spanish] = line.split(';');
+          return { polish: polish.trim(), spanish: spanish.trim() };
         });
         if (cards.length > 0) {
           showCard(0);
@@ -63,10 +89,18 @@
       }
     }
 
+    function updateLanguageOrder() {
+      const select = document.getElementById('languageOrder');
+      languageOrder = select.value;
+      showCard(currentIndex);
+    }
+
     function showCard(index) {
       const card = cards[index];
-      document.getElementById('question').innerText = card.question;
-      document.getElementById('answer').innerText = card.answer;
+      const question = languageOrder === 'pl' ? card.polish : card.spanish;
+      const answer = languageOrder === 'pl' ? card.spanish : card.polish;
+      document.getElementById('question').innerText = question;
+      document.getElementById('answer').innerText = answer;
       document.getElementById('answer').style.display = "none";
       showingAnswer = false;
     }
@@ -83,7 +117,6 @@
       showCard(currentIndex);
     }
 
-    // Cargar CSV al iniciar
     loadCSV();
   </script>
 </body>
