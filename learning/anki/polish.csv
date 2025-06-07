@@ -1,500 +1,217 @@
 Cześć;Hola
 Dzień dobry;Buenos días
-Dobry wieczór;Buenas tardes
 Do widzenia;Adiós
-Pa!;¡Chao!
+Dobranoc;Buenas noches
+Jak się masz?;¿Cómo estás?
+Dziękuję, dobrze;Bien, gracias
 Proszę;Por favor
 Dziękuję;Gracias
-Nie ma za co;De nada
-Przepraszam;Disculpa
+Przepraszam;Disculpa / Lo siento
+Nie rozumiem;No entiendo
+Jak masz na imię?;¿Cómo te llamas?
+Nazywam się...;Me llamo...
+Miło mi cię poznać;Encantado/a de conocerte
+Skąd jesteś?;¿De dónde eres?
+Jestem z Hiszpanii;Soy de España
 Tak;Sí
 Nie;No
-Nie wiem;No lo sé
-Rozumiem;Entiendo
-Nie rozumiem;No entiendo
-Możesz powtórzyć?;¿Puedes repetir?
-Jak masz na imię?;¿Cómo te llamas?
-Mam na imię Anna;Me llamo Anna
-Jak się masz?;¿Cómo estás?
-Dobrze, dziękuję;Bien, gracias
-Źle;Mal
+Może;Quizás
 Gdzie jest toaleta?;¿Dónde está el baño?
 Ile to kosztuje?;¿Cuánto cuesta?
+Chciałbym/Chciałabym to kupić;Quisiera comprar esto
+Poproszę o rachunek;La cuenta, por favor
 Pomocy!;¡Ayuda!
-Nie mówię po polsku;No hablo polaco
+Na zdrowie!;¡Salud!
+Smacznego!;¡Que aproveche!
+Kocham cię;Te quiero / Te amo
+Wszystkiego najlepszego;Feliz cumpleaños
+Szczęśliwego Nowego Roku;Feliz Año Nuevo
+Wesołych Świąt;Felices Fiestas
+Mówisz po hiszpańsku?;¿Hablas español?
 Mówię trochę po polsku;Hablo un poco de polaco
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
-Cześć ;Hola 
-Dzień dobry ;Buenos días 
-Dobry wieczór ;Buenas tardes 
-Do widzenia ;Adiós 
-Pa! ;¡Chao! 
-Proszę ;Por favor 
-Dziękuję ;Gracias 
-Nie ma za co ;De nada 
-Przepraszam ;Disculpa 
-Tak ;Sí 
-Nie ;No 
-Nie wiem ;No lo sé 
-Rozumiem ;Entiendo 
-Nie rozumiem ;No entiendo 
-Możesz powtórzyć? ;¿Puedes repetir? 
-Jak masz na imię? ;¿Cómo te llamas? 
-Mam na imię Anna ;Me llamo Anna 
-Jak się masz? ;¿Cómo estás? 
-Dobrze, dziękuję ;Bien, gracias 
-Źle ;Mal 
-Gdzie jest toaleta? ;¿Dónde está el baño? 
-Ile to kosztuje? ;¿Cuánto cuesta? 
-Pomocy! ;¡Ayuda! 
-Nie mówię po polsku ;No hablo polaco 
-Mówię trochę po polsku ;Hablo un poco de polaco 
+Gdzie jest najbliższy bank?;¿Dónde está el banco más cercano?
+Gdzie jest najbliższy szpital?;¿Dónde está el hospital más cercano?
+Zgubiłem/Zgubiłam się;Me he perdido
+Potrzebuję pomocy;Necesito ayuda
+Która godzina?;¿Qué hora es?
+Jestem zmęczony/zmęczona;Estoy cansado/a
+Jestem głodny/głodna;Tengo hambre
+Jestem spragniony/spragniona;Tengo sed
+Gdzie mogę znaleźć taksówkę?;¿Dónde puedo encontrar un taxi?
+Proszę mnie zabrać pod ten adres;Lléveme a esta dirección, por favor
+Jaki jest twój numer telefonu?;¿Cuál es tu número de teléfono?
+Mój numer to...;Mi número es...
+Co to jest?;¿Qué es esto?
+Jak to się mówi po polsku?;¿Cómo se dice esto en polaco?
+Co robisz?;¿Qué haces?
+Idę na spacer;Voy a dar un paseo
+Podoba mi się to;Me gusta esto
+Nie podoba mi się to;No me gusta esto
+Jestem na wakacjach;Estoy de vacaciones
+Pracuję tutaj;Trabajo aquí
+Uczę się polskiego;Estoy aprendiendo polaco
+Jaka jest dzisiaj pogoda?;¿Qué tiempo hace hoy?
+Jest słonecznie;Hace sol
+Pada deszcz;Está lloviendo
+Jest zimno;Hace frío
+Jest gorąco;Hace calor
+Co polecasz?;¿Qué me recomiendas?
+Chciałbym/Chciałabym zarezerwować stolik;Quisiera reservar una mesa
+Na którą godzinę?;¿Para qué hora?
+Dla ilu osób?;¿Para cuántas personas?
+Jestem wegetarianinem/wegetarianką;Soy vegetariano/a
+Mam alergię na...;Tengo alergia a...
+To było pyszne;Estaba delicioso
+Gdzie jest dworzec kolejowy?;¿Dónde está la estación de tren?
+O której odjeżdża pociąg do...?;¿A qué hora sale el tren para...?
+Ile kosztuje bilet do...?;¿Cuánto cuesta un billete para...?
+Chciałbym/Chciałabym kupić bilet w jedną stronę;Quisiera comprar un billete de ida
+Chciałbym/Chciałabym kupić bilet w obie strony;Quisiera comprar un billete de ida y vuelta
+Z którego peronu?;¿De qué andén?
+Gdzie jest przystanek autobusowy?;¿Dónde está la parada de autobús?
+Jak dojść do...?;¿Cómo llego a...?
+Prosto;Recto
+W lewo;A la izquierda
+W prawo;A la derecha
+Daleko;Lejos
+Blisko;Cerca
+Co słychać?;¿Qué tal? / ¿Qué hay de nuevo?
+W porządku;Todo bien
+Nic nowego;Nada nuevo
+Do zobaczenia wkrótce;Nos vemos pronto
+Do jutra;Hasta mañana
+Powodzenia!;¡Buena suerte!
+Gratulacje!;¡Felicidades!
+Nie ma za co;De nada
+Nie ma problemu;No hay problema
+Oczywiście;Por supuesto
+Zgadzam się;Estoy de acuerdo
+Nie zgadzam się;No estoy de acuerdo
+Masz rację;Tienes razón
+Myślę, że tak;Creo que sí
+Myślę, że nie;Creo que no
+Co myślisz?;¿Qué piensas?
+Dla mnie to obojętne;Me da igual
+Nie wiem;No sé
+Chwileczkę;Un momento
+Mogę ci pomóc?;¿Puedo ayudarte?
+Tak, poproszę;Sí, por favor
+Nie, dziękuję;No, gracias
+Jak minął dzień?;¿Qué tal el día?
+Był wspaniały;Ha sido genial
+Był męczący;Ha sido agotador
+Co będziesz robić jutro?;¿Qué vas a hacer mañana?
+Jeszcze nie wiem;Todavía no lo sé
+Gdzie mieszkasz?;¿Dónde vives?
+Mieszkam w...;Vivo en...
+Czym się zajmujesz?;¿A qué te dedicas?
+Jestem studentem/studentką;Soy estudiante
+Jestem nauczycielem/nauczycielką;Soy profesor/a
+Jestem lekarzem/lekarką;Soy médico/a
+Jestem inżynierem;Soy ingeniero/a
+Skąd pochodzisz?;¿De dónde vienes? (origen)
+Pochodzę z...;Vengo de...
+Jakie są twoje hobby?;¿Cuáles son tus aficiones?
+Lubię czytać książki;Me gusta leer libros
+Lubię oglądać filmy;Me gusta ver películas
+Lubię słuchać muzyki;Me gusta escuchar música
+Lubię uprawiać sport;Me gusta hacer deporte
+Jaka jest twoja ulubiona potrawa?;¿Cuál es tu comida favorita?
+Moja ulubiona potrawa to...;Mi comida favorita es...
+Jaki jest twój ulubiony kolor?;¿Cuál es tu color favorito?
+Mój ulubiony kolor to...;Mi color favorito es...
+Masz rodzeństwo?;¿Tienes hermanos?
+Mam brata;Tengo un hermano
+Mam siostrę;Tengo una hermana
+Nie mam rodzeństwa;No tengo hermanos
+Jesteś żonaty/zamężna?;¿Estás casado/a?
+Jestem singlem/singielką;Estoy soltero/a
+Mam męża;Tengo marido
+Mam żonę;Tengo esposa
+Masz dzieci?;¿Tienes hijos?
+Mam syna;Tengo un hijo
+Mam córkę;Tengo una hija
+Nie mam dzieci;No tengo hijos
+Jak się czujesz?;¿Cómo te sientes?
+Czuję się dobrze;Me siento bien
+Czuję się źle;Me siento mal
+Jestem chory/chora;Estoy enfermo/a
+Boli mnie głowa;Me duele la cabeza
+Potrzebuję lekarza;Necesito un médico
+Gdzie jest apteka?;¿Dónde hay una farmacia?
+Coś do picia?;¿Algo de beber?
+Poproszę wodę;Agua, por favor
+Poproszę kawę;Un café, por favor
+Poproszę herbatę;Un té, por favor
+Z cukrem;Con azúcar
+Bez cukru;Sin azúcar
+Z mlekiem;Con leche
+Bez mleka;Sin leche
+Coś do jedzenia?;¿Algo de comer?
+Kanapkę;Un bocadillo
+Zupę;Una sopa
+Sałatkę;Una ensalada
+Na śniadanie;Para desayunar
+Na obiad;Para almorzar
+Na kolację;Para cenar
+Jestem bardzo wdzięczny/wdzięczna;Estoy muy agradecido/a
+To bardzo miłe z twojej strony;Es muy amable por tu parte
+Nie martw się;No te preocupes
+Wszystko będzie dobrze;Todo saldrá bien
+Uważaj na siebie;Cuídate
+Tęsknię za tobą;Te echo de menos
+Myślę o tobie;Pienso en ti
+Wyglądasz świetnie;Te ves genial
+Jesteś bardzo miły/miła;Eres muy amable
+Jesteś bardzo inteligentny/inteligentna;Eres muy inteligente
+Jesteś bardzo zabawny/zabawna;Eres muy divertido/a
+Zadzwoń do mnie później;Llámame más tarde
+Wyślę ci wiadomość;Te enviaré un mensaje
+Gdzie możemy się spotkać?;¿Dónde podemos quedar?
+Spotkajmy się o...;Quedemos a las...
+Pasuje mi;Me viene bien
+Nie pasuje mi;No me viene bien
+Jestem zajęty/zajęta;Estoy ocupado/a
+Jestem wolny/wolna;Estoy libre
+Co nowego?;¿Qué hay de nuevo?
+Jak zawsze;Como siempre
+Cieszę się, że cię widzę;Me alegro de verte
+Ja również;Yo también
+Miłego dnia!;¡Que tengas un buen día!
+Miłego wieczoru!;¡Que tengas una buena tarde/noche!
+Miłego weekendu!;¡Que tengas un buen fin de semana!
+Udanej podróży!;¡Buen viaje!
+Wzajemnie!;¡Igualmente!
+Co za niespodzianka!;¡Qué sorpresa!
+Nie wierzę!;¡No me lo puedo creer!
+Naprawdę?;¿De verdad?
+Żartujesz?;¿Estás bromeando?
+To niemożliwe;Es imposible
+To prawda;Es verdad
+Zgadzam się z tobą;Estoy de acuerdo contigo
+Masz absolutną rację;Tienes toda la razón
+Dokładnie;Exactamente
+O to chodzi;Ese es el punto
+Rozumiem, co masz na myśli;Entiendo lo que quieres decir
+Powtórz, proszę;Repite, por favor
+Mów wolniej, proszę;Habla más despacio, por favor
+Możesz to napisać?;¿Puedes escribirlo?
+Jak się pisze...?;¿Cómo se escribe...?
+Co to znaczy?;¿Qué significa eso?
+Nie zrozumiałem/zrozumiałam ostatniego słowa;No entendí la última palabra
+Jestem tu w interesach;Estoy aquí por negocios
+Chciałbym/Chciałabym otworzyć konto w banku;Quisiera abrir una cuenta bancaria
+Chciałbym/Chciałabym wymienić pieniądze;Quisiera cambiar dinero
+Jaki jest kurs wymiany?;¿Cuál es el tipo de cambio?
+Gdzie jest ambasada Hiszpanii?;¿Dónde está la embajada de España?
+Mam rezerwację;Tengo una reserva
+Klucz do mojego pokoju, proszę;La llave de mi habitación, por favor
+O której jest śniadanie?;¿A qué hora es el desayuno?
+O której muszę się wymeldować?;¿A qué hora tengo que hacer el check-out?
+Można prosić o hasło do Wi-Fi?;¿Me puede dar la contraseña del Wi-Fi?
+Klimatyzacja nie działa;El aire acondicionado no funciona
+W pokoju nie ma ciepłej wody;No hay agua caliente en la habitación
+Mogę prosić o dodatkowy ręcznik?;¿Me puede dar una toalla extra?
+Chciałbym/Chciałabym zamówić obsługę pokoju;Quisiera pedir servicio de habitaciones
+To na wynos;Para llevar
+Na miejscu;Para tomar aquí
