@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trivia Fútbol Español con Fotos</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f0f0f0;
+      display:flex; flex-direction:column; align-items:center; padding:20px;}
+    #quiz-container { background:#fff; padding:20px; border-radius:8px;
+      box-shadow:0 0 10px rgba(0,0,0,0.2); max-width:600px; width:100%;}
+    img { max-width:100%; height:auto; margin-bottom:15px; border-radius:4px;}
+    .question { font-size:1.2em; margin-bottom:12px; }
+    .option { display:block; width:100%; padding:10px; margin:8px 0;
+      font-size:1em; cursor:pointer; border:1px solid #ccc; border-radius:4px;
+      background:#e8e8e8; transition:background .3s; }
+    .option:hover { background:#d8d8d8; }
+    #next-btn { margin-top:15px; padding:10px 20px; font-size:1em; cursor:pointer; }
+    #score { font-size:1.3em; margin-top:20px; }
+  </style>
+</head>
+<body>
+  <div id="quiz-container">
+    <h1>⚽ Beltrán y Martina Trivia de Fútbol Español ⚽ </h1>
+    <div class="question" id="question"></div>
+    <div id="options"></div>
+    <button id="next-btn" style="display:none;">Siguiente</button>
+    <div id="score"></div>
+  </div>
+
+<script>
+  const imagePool = [
+    'https://via.placeholder.com/600x300?text=España+fútbol+1',
+    'https://via.placeholder.com/600x300?text=España+fútbol+2',
+    'https://via.placeholder.com/600x300?text=España+fútbol+3',
+    'https://via.placeholder.com/600x300?text=España+fútbol+4'
+  ];
+
+  const allQuestions = [
+  {q:"¿En qué año ganó España su primera Eurocopa en el siglo XXI?", correct:"2008", incorrect:["2004","2012"]},
+  {q:"¿En qué año España fue campeona del Mundial por primera vez?", correct:"2010", incorrect:["2006","2014"]},
+  {q:"¿Contra quién ganó España la final de la Eurocopa 2008?", correct:"Alemania", incorrect:["Italia","Portugal"]},
+  {q:"¿Quién marcó el gol decisivo en la final del Mundial 2010?", correct:"Andrés Iniesta", incorrect:["David Villa","Fernando Torres"]},
+  {q:"¿Qué seleccionador dirigió a España en su Mundial 2010?", correct:"Vicente del Bosque", incorrect:["Luis Aragonés","Luis Enrique"]},
+  {q:"¿Cuántas Eurocopas ha ganado España hasta 2024?", correct:"4", incorrect:["3","5"]},
+  {q:"¿Cuál fue el resultado final de España vs Inglaterra en la Eurocopa 2024?", correct:"2‑1", incorrect:["1‑0","3‑2"]},
+  {q:"¿Quién asistió en el gol de la victoria en la final de la Eurocopa 2024?", correct:"Lamine Yamal", incorrect:["Pedri","Rodri"]},
+  {q:"¿Qué jugador se convirtió en el más joven en marcar en una Eurocopa con España?", correct:"Lamine Yamal", incorrect:["Gavi","Ferran Torres"]},
+  {q:"¿Qué rival eliminó a España en los octavos del Mundial 2022?", correct:"Marruecos", incorrect:["Japón","Alemania"]},
+  {q:"¿Cuántos partidos ganó España en la fase final de la Euro 2024?", correct:"7", incorrect:["6","5"]},
+  {q:"¿Qué título conquistó España en 2023 derrotando a Croacia en penaltis?", correct:"Nations League", incorrect:["Eurocopa","Confederaciones"]},
+  {q:"¿Qué récord empató España con 35 partidos sin perder entre 2007 y 2009?", correct:"Brasil", incorrect:["Argentina","Italia"]},
+  {q:"¿Quién fue el máximo goleador de España en la Eurocopa 2012?", correct:"Fernando Torres", incorrect:["Silva","Fàbregas"]},
+  {q:"¿Qué guardameta fue clave en el Mundial 2010 y ganó el Guante de Oro?", correct:"Iker Casillas", incorrect:["Víctor Valdés","David De Gea"]},
+  {q:"¿Quién fue el entrenador de la selección en la Eurocopa 2012?", correct:"Vicente del Bosque", incorrect:["Luis Aragonés","Luis de la Fuente"]},
+  {q:"¿Contra qué equipo ganó España su primer partido 7‑0 en Mundial (2022)?", correct:"Costa Rica", incorrect:["Australia","Irán"]},
+  {q:"¿Cuántos goles anotó España en su récord de 7‑0 en 2022?", correct:"7", incorrect:["6","8"]},
+  {q:"¿Quién fue el goleador de España en el Mundial 2022 con 3 goles?", correct:"Álvaro Morata", incorrect:["Ferran Torres","Rodri"]},
+  {q:"¿Qué entrenador tomó el relevo tras el Mundial 2022?", correct:"Luis de la Fuente", incorrect:["Luis Enrique","Julen Lopetegui"]},
+  {q:"¿En qué torneo marcó Gavi e hizo historia juvenil en 2023/24?", correct:"Euro 2024", incorrect:["Mundial 2022","Nations League 2023"]},
+  {q:"¿España revalidó su título de Eurocopa por segunda vez consecutiva en?", correct:"2024", incorrect:["2016","2008"]},
+  {q:"¿Cuántos goles marcó España en total en la Eurocopa 2024?", correct:"15", incorrect:["12","10"]},
+  {q:"¿Qué jugador español ganó el Balón de Oro femenino en 2024?", correct:"Aitana Bonmatí", incorrect:["Alexia Putellas","Jenni Hermoso"]},
+  {q:"¿Qué entrenador llevó a España a la Eurocopa 2024 exitosa?", correct:"Luis de la Fuente", incorrect:["Luis Enrique","Montse Tomé"]},
+  {q:"¿Quién fue el máximo goleador español en el Mundial 2018?", correct:"Diego Costa", incorrect:["Isco","Morata"]},
+  {q:"¿En qué año debutó Sergio Ramos con la selección española?", correct:"2005", incorrect:["2007","2003"]},
+  {q:"¿Qué jugador español anotó un hat-trick en la Eurocopa 2012?", correct:"Fernando Torres", incorrect:["David Villa","Cesc Fàbregas"]},
+  {q:"¿Qué club aportó más jugadores a la selección española en el Mundial 2010?", correct:"Barcelona", incorrect:["Real Madrid","Valencia"]},
+  {q:"¿Quién fue el capitán de España durante la Eurocopa 2012?", correct:"Iker Casillas", incorrect:["Sergio Ramos","Xavi"]},
+  {q:"¿Qué jugador marcó el gol más rápido de España en la Eurocopa 2020?", correct:"Pedri", incorrect:["Ferrán Torres","Dani Olmo"]},
+  {q:"¿Contra qué equipo España perdió en semifinales del Mundial 2018?", correct:"Rusia", incorrect:["Croacia","Francia"]},
+  {q:"¿Qué entrenador dirigió a España durante la Eurocopa 2016?", correct:"Vicente del Bosque", incorrect:["Julen Lopetegui","Luis Enrique"]},
+  {q:"¿Cuántos goles marcó David Villa en la Eurocopa 2008?", correct:"4", incorrect:["3","5"]},
+  {q:"¿Qué portero suplente formó parte de la plantilla española en el Mundial 2010?", correct:"Pepe Reina", incorrect:["Víctor Valdés","David De Gea"]},
+  {q:"¿Qué jugador fue conocido como 'El Guaje' en la selección española?", correct:"David Villa", incorrect:["Fernando Torres","Juan Mata"]},
+  {q:"¿Quién fue el entrenador de la selección femenina española en el Mundial 2023?", correct:"Jorge Vilda", incorrect:["Montse Tomé","Vilda Sánchez"]},
+  {q:"¿Qué club femenino español ganó la UEFA Women's Champions League en 2023?", correct:"Barcelona", incorrect:["Atlético de Madrid","Real Madrid"]},
+  {q:"¿Quién fue la máxima goleadora española en el Mundial femenino 2023?", correct:"Alexia Putellas", incorrect:["Jenni Hermoso","Aitana Bonmatí"]},
+  {q:"¿Cuántos títulos de Liga ganó el Barcelona entre 2004 y 2014?", correct:"8", incorrect:["6","9"]},
+  {q:"¿Quién fue el jugador más joven en debutar con la selección española masculina en 2021?", correct:"Gavi", incorrect:["Pedri","Ansu Fati"]},
+  {q:"¿Qué jugador anotó el gol decisivo en la final de la Nations League 2023?", correct:"Álvaro Morata", incorrect:["Ferran Torres","Rodri"]},
+  {q:"¿Cuál fue el resultado de España en la final de la Eurocopa 2012 contra Italia?", correct:"4-0", incorrect:["3-1","2-0"]},
+  {q:"¿Quién fue el máximo asistente español en la Eurocopa 2020?", correct:"Pedri", incorrect:["Busquets","Thiago"]},
+  {q:"¿Qué jugador español ha ganado más títulos de la Champions League?", correct:"Sergio Ramos", incorrect:["Xavi","Iniesta"]},
+  {q:"¿En qué año España ganó la UEFA Nations League por primera vez?", correct:"2023", incorrect:["2021","2019"]},
+  {q:"¿Quién fue el portero titular en la Eurocopa 2012?", correct:"Iker Casillas", incorrect:["Víctor Valdés","David De Gea"]},
+  {q:"¿Qué jugador español marcó más goles en la Liga durante la temporada 2014-2015?", correct:"Lionel Messi", incorrect:["Cristiano Ronaldo","Luis Suárez"]},
+  {q:"¿Quién fue el máximo goleador español en la Eurocopa 2024?", correct:"Ferran Torres", incorrect:["Gavi","Rodri"]},
+  {q:"¿Qué jugador recibió el Balón de Oro en 2010?", correct:"Lionel Messi", incorrect:["Andrés Iniesta","Xavi Hernández"]},
+  {q:"¿Qué jugador español fue conocido como 'El Principito'?", correct:"Xavi Hernández", incorrect:["Iniesta","David Silva"]},
+  {q:"¿En qué año España ganó la medalla de oro en fútbol en los Juegos Olímpicos?", correct:"1992", incorrect:["2000","2008"]},
+  {q:"¿Quién fue el máximo goleador español en la Eurocopa 2000?", correct:"Raúl González", incorrect:["Fernando Morientes","Gaizka Mendieta"]},
+  {q:"¿Qué jugador marcó el gol de la victoria contra Italia en la Eurocopa 2008?", correct:"Fernando Torres", incorrect:["David Villa","Xavi"]},
+  {q:"¿Qué portero sustituyó a Iker Casillas en la selección española tras su retiro?", correct:"David De Gea", incorrect:["Víctor Valdés","Pepe Reina"]},
+  {q:"¿Qué equipo ganó la Liga española en la temporada 2007-2008?", correct:"Real Madrid", incorrect:["Barcelona","Valencia"]},
+  {q:"¿Quién fue el máximo goleador español en la Copa América 2019?", correct:"No participó", incorrect:["Diego Costa","Thiago Alcántara"]},
+  {q:"¿Qué jugador español es conocido por su paso destacado en el Liverpool y Chelsea?", correct:"Fernando Torres", incorrect:["Juan Mata","Pedro"]},
+  {q:"¿Qué selección eliminó a España en cuartos de final del Mundial 2014?", correct:"Chile", incorrect:["Brasil","Países Bajos"]},
+  {q:"¿Qué entrenador dirigió a España en el Mundial 2018?", correct:"Julen Lopetegui", incorrect:["Luis Enrique","Vicente del Bosque"]},
+  {q:"¿Qué club español ganó la Europa League consecutivamente en 2014 y 2015?", correct:"Sevilla", incorrect:["Atlético de Madrid","Valencia"]},
+  {q:"¿Quién fue el máximo goleador español en la Liga durante la temporada 2019-2020?", correct:"Lionel Messi", incorrect:["Karim Benzema","Luis Suárez"]},
+  {q:"¿Qué jugador marcó el gol de la victoria en la final de la Eurocopa femenina 2022?", correct:"Jennifer Hermoso", incorrect:["Alexia Putellas","Aitana Bonmatí"]},
+  {q:"¿Qué jugador fue el más joven en debutar con la selección femenina española?", correct:"Claudia Pina", incorrect:["Aitana Bonmatí","Alexia Putellas"]},
+  {q:"¿Qué jugador marcó el gol del empate en la final de la Champions League 2014 para el Real Madrid?", correct:"Sergio Ramos", incorrect:["Cristiano Ronaldo","Gareth Bale"]},
+  {q:"¿Qué jugador español ganó el premio al Mejor Jugador Joven de la UEFA en 2012?", correct:"Jordi Alba", incorrect:["Isco","Thiago Alcántara"]},
+  {q:"¿Cuál es el club español que más títulos de Copa del Rey ha ganado desde 2000?", correct:"Barcelona", incorrect:["Sevilla","Real Madrid"]},
+  {q:"¿Quién fue el máximo goleador español en la Eurocopa 2016?", correct:"Alvaro Morata", incorrect:["Diego Costa","Pedro"]},
+  {q:"¿Qué jugador español anotó un gol de chilena en el Mundial 2018?", correct:"Diego Costa", incorrect:["Isco","David Silva"]},
+  {q:"¿Qué jugador fue conocido como 'El Niño'?", correct:"Fernando Torres", incorrect:["David Villa","Sergio Ramos"]},
+  {q:"¿Qué club español ganó la Liga en la temporada 2013-2014?", correct:"Atlético de Madrid", incorrect:["Real Madrid","Barcelona"]},
+  {q:"¿Qué jugador marcó el gol más rápido en la historia de la selección española?", correct:"José Luis Pérez Caminero", incorrect:["David Villa","Raúl González"]},
+  {q:"¿Quién fue el entrenador que devolvió a España a una gran final tras la Eurocopa 2008?", correct:"Vicente del Bosque", incorrect:["Luis Enrique","Julen Lopetegui"]},
+  {q:"¿Qué club español ganó la Champions League en 2014?", correct:"Real Madrid", incorrect:["Barcelona","Atlético de Madrid"]},
+  {q:"¿Quién fue el máximo goleador español en la Eurocopa 2020?", correct:"Alvaro Morata", incorrect:["Ferran Torres","Paco Alcácer"]},
+  {q:"¿Quién fue el primer entrenador de España en ganar un Mundial?", correct:"Vicente del Bosque", incorrect:["Luis Aragonés","Javier Clemente"]},
+  {q:"¿Qué jugador español anotó el primer gol en la Eurocopa 2024?", correct:"Lamine Yamal", incorrect:["Gavi","Ferran Torres"]},
+  {q:"¿En qué año España ganó su primera medalla olímpica en fútbol después de 2000?", correct:"2020", incorrect:["2008","2012"]},
+  {q:"¿Qué jugador ganó el premio al mejor jugador joven de la Eurocopa 2012?", correct:"Jordi Alba", incorrect:["Thiago Alcántara","Isco"]},
+  {q:"¿Qué ciudad española fue sede de partidos en la Eurocopa 2020?", correct:"Sevilla", incorrect:["Madrid","Barcelona"]},
+  {q:"¿Qué jugador marcó un gol en la final de la Eurocopa femenina 2023?", correct:"Olga Carmona", incorrect:["Jennifer Hermoso","Alexia Putellas"]},
+  {q:"¿Cuál es el récord de partidos consecutivos sin perder de España entre 2007 y 2009?", correct:"35", incorrect:["30","40"]},
+  {q:"¿Qué portero español tuvo más partidos internacionales desde 2000?", correct:"Iker Casillas", incorrect:["David De Gea","Víctor Valdés"]},
+  {q:"¿En qué año España perdió en cuartos de final del Mundial contra Italia?", correct:"2006", incorrect:["2010","2014"]},
+  {q:"¿Quién fue el goleador español en la final de la Eurocopa 2008?", correct:"Fernando Torres", incorrect:["David Villa","Xavi"]},
+  {q:"¿Qué jugador fue conocido como 'El Mago' en la selección española?", correct:"Cesc Fàbregas", incorrect:["Xavi","Andrés Iniesta"]},
+  {q:"¿Quién fue el máximo goleador español en la Copa Confederaciones 2013?", correct:"David Villa", incorrect:["Fernando Torres","Pedro"]},
+  {q:"¿Qué jugador español anotó en la final del Mundial de Clubes 2012?", correct:"Fábregas", incorrect:["Villa","Pedro"]},
+  {q:"¿Qué jugador anotó el gol de la victoria en semifinales de la Eurocopa 2008 contra Rusia?", correct:"David Villa", incorrect:["Fernando Torres","Xavi"]},
+  {q:"¿Qué futbolista español fue traspasado al Manchester City en 2023?", correct:"Rodri", incorrect:["Gavi","Pedri"]},
+  {q:"¿Quién fue el entrenador de la selección española femenina durante el Mundial 2023?", correct:"Jorge Vilda", incorrect:["Montse Tomé","Vilda Sánchez"]},
+  {q:"¿Qué club ganó la Liga femenina española en 2023?", correct:"Barcelona", incorrect:["Atlético de Madrid","Real Madrid"]},
+  {q:"¿Qué jugador español anotó dos goles en un partido de la Eurocopa 2024 contra Polonia?", correct:"Ferran Torres", incorrect:["Gavi","Álvaro Morata"]},
+  {q:"¿Qué jugador español fue clave en la remontada contra Portugal en la Eurocopa 2012?", correct:"Cesc Fàbregas", incorrect:["David Silva","Xavi"]},
+  {q:"¿Qué portero suplente fue parte del equipo español campeón del Mundial 2010?", correct:"Pepe Reina", incorrect:["Víctor Valdés","David De Gea"]},
+  {q:"¿En qué año España logró su mejor clasificación en la Copa Mundial Sub-21?", correct:"2013", incorrect:["2011","2015"]},
+  {q:"¿Qué jugador fue conocido por su paso en el Atlético de Madrid y goleador en la Eurocopa 2020?", correct:"Álvaro Morata", incorrect:["Ferrán Torres","Paco Alcácer"]},
+  {q:"¿Qué entrenador reemplazó a Luis Aragonés antes del Mundial 2010?", correct:"Vicente del Bosque", incorrect:["Luis Enrique","Julen Lopetegui"]},
+  {q:"¿Qué jugador español anotó un gol en la final de la Champions League 2015?", correct:"Sergio Ramos", incorrect:["Cristiano Ronaldo","Lionel Messi"]},
+  {q:"¿Cuál fue el resultado de España en la fase de grupos del Mundial 2014?", correct:"1 victoria, 2 derrotas", incorrect:["2 victorias, 1 empate","3 victorias"]},
+
+  ];
+
+  function shuffle(a){ return a.sort(()=>Math.random()-.5); }
+  let selectedQs = shuffle(allQuestions).slice(0,10);
+  let current=0, score=0;
+
+  
+  const qEl=document.getElementById("question");
+  const optsEl=document.getElementById("options");
+  const nextBtn=document.getElementById("next-btn");
+  const scoreEl=document.getElementById("score");
+
+  function showQA(){
+    const Q = selectedQs[current];
+    qEl.textContent = `Pregunta ${current+1}: ${Q.q}`;
+    const answers = shuffle([Q.correct, ...Q.incorrect]);
+    optsEl.innerHTML="";
+    answers.forEach(ans=>{
+      const b=document.createElement("button");
+      b.className="option";
+      b.textContent=ans;
+      b.onclick=()=>choose(ans===Q.correct,b);
+      optsEl.appendChild(b);
+    });
+  }
+
+  function choose(isCorrect,btn){
+    if(isCorrect) score++;
+    Array.from(optsEl.children).forEach(b=>{
+      b.disabled=true;
+      if(b.textContent===selectedQs[current].correct) b.style.backgroundColor="#8BC34A";
+      else if(b === btn) b.style.backgroundColor="#F44336";
+    });
+    nextBtn.style.display="inline-block";
+  }
+
+  nextBtn.onclick=()=>{
+    current++;
+    nextBtn.style.display="none";
+    if(current<selectedQs.length) showQA();
+    else endGame();
+  };
+
+  function endGame(){
+    qEl.textContent="¡Juego terminado!";
+    optsEl.innerHTML="";
+    scoreEl.textContent=`Puntuación: ${score}/${selectedQs.length}`;
+    nextBtn.textContent="Jugar otra vez";
+    nextBtn.style.display="inline-block";
+    nextBtn.onclick=()=>{
+      location.reload();
+    };
+  }
+
+  showQA();
+</script>
