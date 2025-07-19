@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Juego de Parejas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f4f4f4;
+    }
+    h1 {
+      margin-top: 20px;
+    }
+    #game {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      grid-gap: 10px;
+      justify-content: center;
+      margin: 20px auto;
+    }
+    .card {
+      width: 100px;
+      height: 100px;
+      background: #3498db;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+      user-select: none;
+      font-size: 14px;
+    }
+    .card.flipped {
+      background: #2ecc71;
+      cursor: default;
+    }
+    .card.matched {
+      background: #95a5a6;
+      cursor: default;
+    }
+    #stats {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Juego de Parejas</h1>
+  <div id="game"></div>
+  <div id="stats">
+    Intentos: <span id="attempts">0</span><br />
+    Aciertos: <span id="matches">0</span><br />
+    Porcentaje de aciertos: <span id="percentage">0%</span>
+  </div>
+
+  <script>
+    const words = [
+      "Cristina", "Álvaro", "Beltrán", "Martina",
+      "Abuelo Juan", "Abuela Cinta", "Juan", "Kasia"
+    ];
+    const cards = [...words, ...words].sort(() => Math.random() - 0.5);
+    const game = document.getElementById("game");
+
+    let flipped = [];
+    let matchedCount = 0;
+    let attempts = 0;
+
+    function updateStats() {
+      document.getElementById("attempts").textContent = attempts;
+      document.getElementById("matches").textContent = matchedCount;
+      let percent = attempts > 0 ? ((matchedCount / attempts) * 100).toFixed(1) : 0;
+      document.getElementById("percentage").textContent = percent + "%";
+    }
+
+    function createCard(word, index) {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.dataset.word = word;
+      card.dataset.index = index;
+      card.textContent = "";
+      card.addEventListener("click", () => flipCard(card));
+      return card;
+    }
+
+    function flipCard(card) {
+      if (
+        card.classList.contains("flipped") ||
+        card.classList.contains("matched") ||
+        flipped.length === 2
+      ) return;
+
+      card.classList.add("flipped");
+      card.textContent = card.dataset.word;
+      flipped.push(card);
+
+      if (flipped.length === 2) {
+        attempts++;
+        if (flipped[0].dataset.word === flipped[1].dataset.word) {
+          flipped[0].classList.add("matched");
+          flipped[1].classList.add("matched");
+          matchedCount++;
+          flipped = [];
+        } else {
+          setTimeout(() => {
+            flipped.forEach(c => {
+              c.classList.remove("flipped");
+              c.textContent = "";
+            });
+            flipped = [];
+          }, 1000);
+        }
+        updateStats();
+      }
+    }
+
+    // Crear las cartas
+    cards.forEach((word, index) => {
+      game.appendChild(createCard(word, index));
+    });
+  </script>
+</body>
+</html>
