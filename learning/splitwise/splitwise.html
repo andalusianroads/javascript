@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Splitwise Simple</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+    }
+    
+    h1 { 
+        text-align: center;
+        color: white;
+        margin-bottom: 30px;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .container {
+        max-width: 650px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    
+    @media (max-width: 768px) {
+        body {
+            padding: 10px;
+        }
+        
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            padding: 20px;
+            border-radius: 15px;
+        }
+        
+        h3 {
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+        
+        input, select, button {
+            font-size: 16px;
+        }
+        
+        li {
+            padding: 12px;
+            font-size: 14px;
+        }
+        
+        .resultado, .transaccion {
+            padding: 10px 12px;
+            font-size: 14px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.5em;
+        }
+        
+        .container {
+            padding: 15px;
+        }
+        
+        h3 {
+            font-size: 1em;
+        }
+    }
+    
+    h3 {
+        color: #667eea;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        font-size: 1.3em;
+        border-bottom: 2px solid #667eea;
+        padding-bottom: 8px;
+    }
+    
+    input, select {
+        width: 100%;
+        padding: 12px 15px;
+        margin: 8px 0;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-size: 15px;
+        transition: all 0.3s ease;
+    }
+    
+    input:focus, select:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+    
+    button {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+    
+    button:active {
+        transform: translateY(0);
+    }
+    
+    .btn-borrar {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+        margin-top: 20px;
+    }
+    
+    .btn-borrar:hover {
+        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    li {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        margin: 8px 0;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease;
+    }
+    
+    li:hover {
+        transform: translateX(5px);
+    }
+    
+    .resultado {
+        font-weight: 600;
+        margin: 12px 0;
+        padding: 12px 15px;
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        border-radius: 10px;
+        border-left: 4px solid #ff6b6b;
+    }
+    
+    .checkboxes {
+        margin: 15px 0;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 10px;
+    }
+    
+    .checkboxes label {
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        cursor: pointer;
+        transition: background 0.2s ease;
+        border-radius: 5px;
+        padding-left: 5px;
+    }
+    
+    .checkboxes label:hover {
+        background: #e9ecef;
+    }
+    
+    .checkboxes input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin: 0 10px 0 0;
+        cursor: pointer;
+        accent-color: #667eea;
+    }
+    
+    .transaccion {
+        font-weight: 600;
+        margin: 12px 0;
+        padding: 12px 15px;
+        background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        border-radius: 10px;
+        border-left: 4px solid #667eea;
+        color: #2c3e50;
+    }
+    
+    .seccion-transacciones {
+        margin-top: 25px;
+        padding-top: 20px;
+        border-top: 2px dashed #667eea;
+    }
+    
+    .seccion-transacciones h4 {
+        color: #667eea;
+        margin-bottom: 15px;
+        font-size: 1.2em;
+    }
+</style>
+</head>
+<body>
+
+<h1>💰 Splitwise Simple</h1>
+
+<div class="container">
+
+    <h3>👥 Personas</h3>
+    <input type="text" id="personaInput" placeholder="Nombre de la persona">
+    <button onclick="addPersona()">Añadir persona</button>
+    <ul id="listaPersonas"></ul>
+
+    <h3>🛒 Añadir gasto</h3>
+    <input type="text" id="concepto" placeholder="Concepto (ej. Cervezas)">
+    <input type="number" id="importe" placeholder="Importe" step="0.01">
+    <select id="pagador" onchange="seleccionarPagadorComoParticipante()">
+        <option value="">Selecciona quién pagó</option>
+    </select>
+
+    <strong style="display: block; margin: 15px 0 10px 0; color: #495057;">Participantes:</strong>
+    <div id="participantes" class="checkboxes"></div>
+
+    <button onclick="addGasto()">Añadir gasto</button>
+
+    <h3>📝 Gastos</h3>
+    <ul id="listaGastos"></ul>
+
+    <h3>💳 Resultado</h3>
+    <div id="resultado"></div>
+    
+    <button class="btn-borrar" onclick="borrarTodo()">🗑️ Borrar todos los datos</button>
+
+</div>
+
+<script>
+let personas = [];
+let gastos = [];
+let pagadorAnterior = "";
+
+// Cargar datos al iniciar
+window.onload = function() {
+    cargarDatos();
+    actualizarUI();
+};
+
+function guardarDatos() {
+    localStorage.setItem('splitwise_personas', JSON.stringify(personas));
+    localStorage.setItem('splitwise_gastos', JSON.stringify(gastos));
+}
+
+function cargarDatos() {
+    const personasGuardadas = localStorage.getItem('splitwise_personas');
+    const gastosGuardados = localStorage.getItem('splitwise_gastos');
+    
+    if (personasGuardadas) {
+        personas = JSON.parse(personasGuardadas);
+    }
+    if (gastosGuardados) {
+        gastos = JSON.parse(gastosGuardados);
+    }
+    
+    if (gastos.length > 0) {
+        calcularBalances();
+    }
+}
+
+function borrarTodo() {
+    if (confirm('¿Estás seguro de que quieres borrar todos los datos? Esta acción no se puede deshacer.')) {
+        personas = [];
+        gastos = [];
+        pagadorAnterior = "";
+        localStorage.removeItem('splitwise_personas');
+        localStorage.removeItem('splitwise_gastos');
+        actualizarUI();
+    }
+}
+
+function addPersona() {
+    const nombre = document.getElementById("personaInput").value.trim();
+    if (nombre === "" || personas.length >= 10) return;
+
+    personas.push({ nombre, balance: 0 });
+    document.getElementById("personaInput").value = "";
+    guardarDatos();
+    actualizarUI();
+}
+
+function seleccionarPagadorComoParticipante() {
+    const pagadorActual = document.getElementById("pagador").value;
+    if (!pagadorActual) return;
+    
+    const checkboxes = document.querySelectorAll("#participantes input[type='checkbox']");
+    checkboxes.forEach(cb => {
+        // Desmarcar el pagador anterior
+        if (cb.value === pagadorAnterior) {
+            cb.checked = false;
+        }
+        // Marcar el pagador actual
+        if (cb.value === pagadorActual) {
+            cb.checked = true;
+        }
+    });
+    
+    pagadorAnterior = pagadorActual;
+}
+
+function addGasto() {
+    const concepto = document.getElementById("concepto").value;
+    const importe = parseFloat(document.getElementById("importe").value);
+    const pagador = document.getElementById("pagador").value;
+
+    const participantes = [...document.querySelectorAll("#participantes input:checked")]
+        .map(cb => cb.value);
+
+    if (!concepto || isNaN(importe) || !pagador || participantes.length === 0) return;
+
+    gastos.push({ concepto, importe, pagador, participantes });
+
+    document.getElementById("concepto").value = "";
+    document.getElementById("importe").value = "";
+    document.getElementById("pagador").value = "";
+    pagadorAnterior = "";
+    
+    // Desmarcar todos los checkboxes
+    document.querySelectorAll("#participantes input[type='checkbox']").forEach(cb => {
+        cb.checked = false;
+    });
+
+    calcularBalances();
+    guardarDatos();
+    actualizarUI();
+}
+
+function calcularBalances() {
+    personas.forEach(p => p.balance = 0);
+
+    gastos.forEach(g => {
+        const parte = g.importe / g.participantes.length;
+
+        g.participantes.forEach(nombre => {
+            if (nombre !== g.pagador) {
+                personas.find(p => p.nombre === nombre).balance -= parte;
+                personas.find(p => p.nombre === g.pagador).balance += parte;
+            }
+        });
+    });
+}
+
+function calcularTransacciones() {
+    const deudores = personas.filter(p => p.balance < -0.01).map(p => ({
+        nombre: p.nombre,
+        cantidad: Math.abs(p.balance)
+    })).sort((a, b) => b.cantidad - a.cantidad);
+
+    const acreedores = personas.filter(p => p.balance > 0.01).map(p => ({
+        nombre: p.nombre,
+        cantidad: p.balance
+    })).sort((a, b) => b.cantidad - a.cantidad);
+
+    const transacciones = [];
+
+    let i = 0, j = 0;
+    while (i < deudores.length && j < acreedores.length) {
+        const deudor = deudores[i];
+        const acreedor = acreedores[j];
+
+        const cantidad = Math.min(deudor.cantidad, acreedor.cantidad);
+
+        transacciones.push({
+            de: deudor.nombre,
+            para: acreedor.nombre,
+            cantidad: cantidad
+        });
+
+        deudor.cantidad -= cantidad;
+        acreedor.cantidad -= cantidad;
+
+        if (deudor.cantidad < 0.01) i++;
+        if (acreedor.cantidad < 0.01) j++;
+    }
+
+    return transacciones;
+}
+
+function actualizarUI() {
+    const listaPersonas = document.getElementById("listaPersonas");
+    const listaGastos = document.getElementById("listaGastos");
+    const pagadorSelect = document.getElementById("pagador");
+    const participantesDiv = document.getElementById("participantes");
+    const resultadoDiv = document.getElementById("resultado");
+
+    listaPersonas.innerHTML = "";
+    listaGastos.innerHTML = "";
+    pagadorSelect.innerHTML = '<option value="">Selecciona quién pagó</option>';
+    participantesDiv.innerHTML = "";
+    resultadoDiv.innerHTML = "";
+
+    personas.forEach(p => {
+        listaPersonas.innerHTML += `<li>${p.nombre}</li>`;
+        pagadorSelect.innerHTML += `<option value="${p.nombre}">${p.nombre}</option>`;
+        participantesDiv.innerHTML += `
+            <label>
+                <input type="checkbox" value="${p.nombre}">
+                <span>${p.nombre}</span>
+            </label>`;
+    });
+
+    gastos.forEach(g => {
+        listaGastos.innerHTML += `
+            <li>
+                <strong>${g.concepto}</strong>: ${g.importe.toFixed(2)} € (pagó ${g.pagador})<br>
+                <small>Participan: ${g.participantes.join(", ")}</small>
+            </li>`;
+    });
+
+    personas.forEach(p => {
+        const texto = p.balance >= 0
+            ? `${p.nombre} debe recibir ${p.balance.toFixed(2)} €`
+            : `${p.nombre} debe pagar ${Math.abs(p.balance).toFixed(2)} €`;
+
+        resultadoDiv.innerHTML += `<div class="resultado">${texto}</div>`;
+    });
+
+    if (gastos.length > 0) {
+        const transacciones = calcularTransacciones();
+        
+        if (transacciones.length > 0) {
+            resultadoDiv.innerHTML += `
+                <div class="seccion-transacciones">
+                    <h4>🔄 Transacciones para saldar cuentas:</h4>
+                </div>`;
+            transacciones.forEach(t => {
+                resultadoDiv.innerHTML += `
+                    <div class="transaccion">
+                        ${t.de} → ${t.para}: ${t.cantidad.toFixed(2)} €
+                    </div>`;
+            });
+        }
+    }
+}
+</script>
+
+</body>
+</html>
